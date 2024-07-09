@@ -4,7 +4,9 @@
         --Medium-Gray: hsl(0, 0%, 41%);
         --Almost-Black: hsl(0, 0%, 8%);
     }
-    
+    html, body{
+        overflow-x:hidden
+    }
     *, *::before, *::after {
         margin: 0px;
         padding: 0px;
@@ -12,10 +14,11 @@
         font-family: 'Epilogue', sans-serif;
     }
     body{
-        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 8% 92%;
+        grid-template-columns: 100vw;
+        grid-template-rows: 8vh 92vh;
     }
     header{
         width: 100vw;
@@ -90,7 +93,7 @@
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: repeat(5, auto);
-        width: 92vw;
+        width: 100vw
     }
     .photo img{
         width: 100vw;
@@ -121,6 +124,7 @@
         background-color: var(--Almost-Black);
         width: 200px;
         height: 60px;
+        margin: 20px 0px;
         font-size: 18px;
         font-weight: 500;
         color: var(--Almost-White);
@@ -140,6 +144,5 @@
     .logoBox svg{
         width: 25%;
         height: auto
-    
     }           
 }
