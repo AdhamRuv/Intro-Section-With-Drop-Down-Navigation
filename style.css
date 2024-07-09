@@ -4,7 +4,11 @@
         --Medium-Gray: hsl(0, 0%, 41%);
         --Almost-Black: hsl(0, 0%, 8%);
     }
-    
+    html{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     *, *::before, *::after {
         margin: 0px;
         padding: 0px;
