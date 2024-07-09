@@ -1,0 +1,168 @@
+@media screen and (min-width: 635px){
+    :root{
+        --Almost-White: hsl(0, 0%, 98%);
+        --Medium-Gray: hsl(0, 0%, 41%);
+        --Almost-Black: hsl(0, 0%, 8%);
+    }
+    
+    *, *::before, *::after {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Epilogue', sans-serif;
+    }
+    body{
+        min-width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 8% 92%
+    }
+    header{
+        width: 100vw;
+        padding: 40px;
+        display: flex;
+        direction: rtl;
+        justify-content: space-between;
+        align-items: center;
+        grid-row: 1 / 2;
+    }
+    .slide{
+        display: none;
+    }
+    .right, .left{
+        display: flex;
+        direction: ltr;
+    }
+    .left{
+        display: flex;
+        justify-content: space-between;
+    }
+    .right{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo{
+        padding-right: 90px;
+    }
+    .left .navBox{
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navBox div svg {
+        position: relative;
+        left: 7.5px;
+    }
+    .right button, .left div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--Medium-Gray);
+        font-weight: 500;
+    }
+    .logIn{
+        background-color: transparent;
+        border: none;
+        font-weight: 700;
+    }
+    .register{
+        padding: 10px 25px;
+        border: 2px solid var(--Medium-Gray);
+        border-radius: 12.5px;
+    }
+    .container{
+        min-height: 800px;
+        padding: 4em 7.5%;
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: repeat(4, 25%);
+        column-gap: 10%;
+        grid-row: 2
+    }
+    h1{
+        width: max(500px);
+        grid-row: 1/2;
+        font-size: 75px;
+        text-wrap: balance;
+        font-weight: 700;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        bottom: -40%;
+    }
+    .container span{
+        display: flex;
+        align-items: flex-end;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--Medium-Gray);
+        line-height: 30px;
+        position: relative;
+        bottom: -40%;
+    }
+    .container button {
+        width: 200px;
+        height: 60px;
+        grid-row: 3 / 4;
+        font-size: 18px;
+        font-weight: 500;
+        border: 1px solid var(--Almost-Black);
+        color: var(--Almost-White);
+        background-color: var(--Almost-Black);
+        border-radius: 12.5px;
+        position: relative;
+        bottom: -80%;
+    }
+    .logoBox {
+        grid-row: 4;
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .logoBox svg{
+        position: relative;
+        bottom: 40px;
+        transform: translateY(65%);
+    }
+    .photo {
+        grid-column: 2;
+        grid-row: 1 / 5
+    }
+    .photo img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .photo img:last-of-type {
+        display: none;
+    }
+    @media screen and (max-width:1050px){
+        h1{
+            width: max(400px);
+        }
+        @media screen and (max-width: 900px){
+            .navBox {
+                visibility: collapse;
+                width: initial;
+            }
+            .right{
+                visibility: collapse
+            }
+            .left{
+                width: 100px;
+            }
+            header{
+                width: 100%;
+            }
+            .slide{
+                visibility: visible;
+                display: block
+            }
+        }
+    }
+    
+}
